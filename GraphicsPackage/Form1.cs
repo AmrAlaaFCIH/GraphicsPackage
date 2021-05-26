@@ -55,5 +55,20 @@ namespace GraphicsPackage
             List<Point> points = Drawing.CircleMidPoint((int)numericUpDown5.Value, (int)numericUpDown6.Value, (int)numericUpDown7.Value);
             Draw(points, g);
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            Graphics g = panel1.CreateGraphics();
+            List<Point> points = Drawing.EllipseMidPoint((int)xEllipse.Value, (int)yEllipse.Value, (int)numericUpDown10.Value, (int)numericUpDown11.Value);
+            Draw(points, g);
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new();
+            this.Hide();
+            form2.ShowDialog();
+            this.Close();
+        }
     }
 }
